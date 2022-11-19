@@ -1,10 +1,11 @@
-import { useState } from "react";
-import "./App.css";
-
+import React, { useState } from "react";
+import GlobalStyle from "./components/GlobalStyle";
+import About from "./pages/About";
 function App() {
   return (
     <div className="App">
-      <h1>walang pepe</h1>
+      <GlobalStyle />
+      <About />
     </div>
   );
 }
