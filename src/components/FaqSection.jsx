@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { LayoutSection } from "../style";
 const FaqSection = () => {
   return (
-    <LayoutSection>
+    <StyledFaq>
       <h2>
         Any Question <span>FAQ</span>
       </h2>
@@ -16,6 +16,7 @@ const FaqSection = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, hic.
           </p>
         </div>
+        <div className="faq-line"></div>
       </div>
       <div className="question">
         <h4>Daily Schedule</h4>
@@ -25,6 +26,7 @@ const FaqSection = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, hic.
           </p>
         </div>
+        <div className="faq-line"></div>
       </div>
       <div className="question">
         <h4>Different Payment Method</h4>
@@ -34,9 +36,25 @@ const FaqSection = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, hic.
           </p>
         </div>
+        <div className="faq-line"></div>
       </div>
-    </LayoutSection>
+    </StyledFaq>
   );
 };
+const StyledFaq = styled(LayoutSection)`
+  display: block;
+  span {
+    display: block;
+  }
+  h2 {
+    margin-bottom: 2rem;
+  }
+  .faq-line {
+    width: 100%;
+    background: white;
+    height: 0.3rem;
+    margin-bottom: 1rem;
+  }
+`;
 
 export default FaqSection;
