@@ -1,8 +1,10 @@
 import React from "react";
-
+// import stlyed components
+import styled from "styled-components";
+import { LayoutSection } from "../style";
 const FaqSection = () => {
   return (
-    <div>
+    <LayoutSection>
       <h2>
         Any Question <span>FAQ</span>
       </h2>
@@ -33,7 +35,7 @@ const FaqSection = () => {
           </p>
         </div>
       </div>
-    </div>
+    </LayoutSection>
   );
 };
 
