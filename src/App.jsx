@@ -7,6 +7,7 @@ import Nav from "./components/Nav";
 import About from "./pages/About";
 import ContactUs from "./pages/ContactUs";
 import MovieDetail from "./pages/MovieDetail";
+import NotFound from "./pages/NotFound";
 import OurWork from "./pages/OurWork";
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path=":id" element={<MovieDetail />} />
         </Route>
         <Route path="/contact" element={<ContactUs />}></Route>
+        <Route path="/*" element={<NotFound />} />
       </Routes>
     </div>
   );
