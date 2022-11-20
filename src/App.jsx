@@ -6,6 +6,7 @@ import Nav from "./components/Nav";
 // import page
 import About from "./pages/About";
 import ContactUs from "./pages/ContactUs";
+import MovieDetail from "./pages/MovieDetail";
 import OurWork from "./pages/OurWork";
 function App() {
   return (
@@ -14,7 +15,11 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<About />}></Route>
-        <Route path="/work" element={<OurWork />}></Route>
+        {/* nested route index for parent page (OurWork Page)  */}
+        <Route path="/work">
+          <Route index element={<OurWork />} />
+          <Route path=":id" element={<MovieDetail />} />
+        </Route>
         <Route path="/contact" element={<ContactUs />}></Route>
       </Routes>
     </div>
