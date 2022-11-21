@@ -5,10 +5,18 @@ import styled from "styled-components";
 import athlete from "../img/athlete-small.png";
 import goodtimes from "../img/goodtimes-small.png";
 import theracer from "../img/theracer-small.png";
-
+// import animation
+import { motion as m } from "framer-motion";
+import { pageAnimation } from "../animation";
 const OurWork = () => {
   return (
-    <StyledWork>
+    <StyledWork
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+      style={{ background: "#ffff", color: "#202124" }}
+    >
       <StyledMovie>
         <h2>The Athele</h2>
         <div className="line"></div>
@@ -33,7 +41,7 @@ const OurWork = () => {
     </StyledWork>
   );
 };
-const StyledWork = styled.div`
+const StyledWork = styled(m.div)`
   min-height: 100vh;
   padding: 5rem 10rem;
   overflow: hidden;

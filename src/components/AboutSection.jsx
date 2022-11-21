@@ -3,6 +3,7 @@ import home1 from "../img/home1.png";
 // import style
 import styled from "styled-components";
 import { DescriptionLayout, Hide, Image, LayoutSection } from "../style";
+
 const AboutSection = () => {
   return (
     <LayoutSection>
