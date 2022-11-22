@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { Hide } from "../style";
 // import imagees
 import athlete from "../img/athlete-small.png";
 import goodtimes from "../img/goodtimes-small.png";
 import theracer from "../img/theracer-small.png";
 // import animation
 import { motion as m } from "framer-motion";
-import { pageAnimation } from "../animation";
+import { imageMotion, pageAnimation } from "../animation";
 const OurWork = () => {
   return (
     <StyledWork
@@ -20,23 +21,29 @@ const OurWork = () => {
       <StyledMovie>
         <h2>The Athele</h2>
         <div className="line"></div>
-        <Link to="/work/the-athlete">
-          <img src={athlete} alt="" />
-        </Link>
+        <Hide variants={imageMotion}>
+          <Link to="/work/the-athlete">
+            <m.img variants={imageMotion} src={athlete} alt="" />
+          </Link>
+        </Hide>
       </StyledMovie>
       <StyledMovie>
         <h2>The Goodtimes</h2>
         <div className="line"></div>
-        <Link to="/work/good-times">
-          <img src={goodtimes} alt="" />
-        </Link>
+        <Hide variants={imageMotion}>
+          <Link to="/work/good-times">
+            <m.img variants={imageMotion} src={goodtimes} alt="" />
+          </Link>
+        </Hide>
       </StyledMovie>
       <StyledMovie>
         <h2>The Racer</h2>
         <div className="line"></div>
-        <Link to="/work/the-racer">
-          <img src={theracer} alt="" />
-        </Link>
+        <Hide>
+          <Link to="/work/the-racer">
+            <m.img variants={imageMotion} src={theracer} alt="" />
+          </Link>
+        </Hide>
       </StyledMovie>
     </StyledWork>
   );
