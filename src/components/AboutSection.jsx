@@ -3,21 +3,24 @@ import home1 from "../img/home1.png";
 // import style
 import styled from "styled-components";
 import { DescriptionLayout, Hide, Image, LayoutSection } from "../style";
+// import motion
+import { motion as m } from "framer-motion";
+import { imageMotion, titleMotion } from "../animation";
 const AboutSection = () => {
   return (
     <LayoutSection>
       <DescriptionLayout>
         <div className="title">
           <Hide>
-            <h2>We work to make </h2>
+            <m.h2 variants={titleMotion}>We work to make </m.h2>
           </Hide>
           <Hide>
-            <h2>
+            <m.h2 variants={titleMotion}>
               your <span>dreams</span>
-            </h2>
+            </m.h2>
           </Hide>
           <Hide>
-            <h2>come true. </h2>
+            <m.h2 variants={titleMotion}>come true. </m.h2>
           </Hide>
         </div>
         <p>
@@ -27,7 +30,7 @@ const AboutSection = () => {
         <button>Contact Us</button>
       </DescriptionLayout>
       <Image>
-        <img src={home1} alt="" />
+        <m.img variants={imageMotion} src={home1} alt="" />
       </Image>
     </LayoutSection>
   );

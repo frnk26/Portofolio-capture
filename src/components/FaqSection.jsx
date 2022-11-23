@@ -2,42 +2,38 @@ import React from "react";
 // import stlyed components
 import styled from "styled-components";
 import { LayoutSection } from "../style";
+import Toggle from "./Toggle";
+// import animation
+import { AnimateSharedLayout } from "framer-motion";
 const FaqSection = () => {
   return (
     <StyledFaq>
       <h2>
         Any Question <span>FAQ</span>
       </h2>
-      <div className="question">
-        <h4>How Do I Start?</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, hic.
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>Daily Schedule</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, hic.
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>Different Payment Method</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, hic.
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
+      <AnimateSharedLayout>
+        <Toggle title=" How Do I Start?">
+          <div className="answer">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, hic.
+            </p>
+          </div>
+        </Toggle>
+        <Toggle title="Daily Schedule">
+          <div className="answer">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, hic.
+            </p>
+          </div>
+        </Toggle>
+        <Toggle title="Different Payment Method">
+          <div className="answer">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, hic.
+            </p>
+          </div>
+        </Toggle>
+      </AnimateSharedLayout>
     </StyledFaq>
   );
 };
@@ -49,11 +45,14 @@ const StyledFaq = styled(LayoutSection)`
   h2 {
     margin-bottom: 2rem;
   }
+  h4 {
+    cursor: pointer;
+  }
   .faq-line {
     width: 100%;
     background: white;
     height: 0.3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
   }
 `;
 
